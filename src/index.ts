@@ -4,7 +4,7 @@ const DefinePlugin = require('webpack/lib/DefinePlugin')
 /**
  * @param exclude add paths to packages that have problems with their sourcemaps
  */
-export = function development({devtool = 'cheap-module-eval-source-map'}) {
+export = function development({devtool = 'cheap-module-eval-source-map'} = {}) {
   return function development(this: WebpackConfig): WebpackConfig {
     return {
       debug: true,
