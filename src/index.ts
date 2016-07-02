@@ -71,8 +71,8 @@ export = function development({devtool = 'cheap-module-inline-source-map'} = {})
             'ENV': JSON.stringify(this.metadata.ENV),
             'NODE_ENV': JSON.stringify(this.metadata.ENV),
             'HMR': this.metadata.HMR,
-            'WEBPACK_HOST': this.metadata.host,
-            'WEBPACK_PORT': this.metadata.port
+            'WEBPACK_HOST': JSON.stringify(this.metadata.host),
+            'WEBPACK_PORT': JSON.stringify(this.metadata.port)
           }
         })
       ].concat(get(this, 'plugins', []))
