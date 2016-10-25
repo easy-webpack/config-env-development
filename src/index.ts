@@ -7,7 +7,6 @@ const DefinePlugin = require('webpack/lib/DefinePlugin')
 export = function development({devtool = 'cheap-module-inline-source-map'} = {}) {
   return function development(this: WebpackConfig): WebpackConfig {
     return {
-      debug: true,
       devtool,
       // devtool: 'eval',
       // devtool: 'cheap-module-source-map',
