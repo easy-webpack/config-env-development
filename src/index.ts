@@ -1,11 +1,11 @@
-import {WebpackConfig, get} from '@easy-webpack/core'
+import {WebpackConfigWithMetadata, get} from '@easy-webpack/core'
 const DefinePlugin = require('webpack/lib/DefinePlugin')
 
 /**
  * @param exclude add paths to packages that have problems with their sourcemaps
  */
 export = function development({devtool = 'cheap-module-inline-source-map'} = {}) {
-  return function development(this: WebpackConfig): WebpackConfig {
+  return function development(this: WebpackConfigWithMetadata): WebpackConfigWithMetadata {
     return {
       devtool,
       // devtool: 'eval',
