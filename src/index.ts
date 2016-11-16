@@ -58,8 +58,7 @@ export = function development({devtool = 'cheap-module-inline-source-map'} = {})
         watchOptions: {
           aggregateTimeout: 300,
           poll: 1000
-        },
-        outputPath: this.output.path
+        }
       },
       plugins: [
         new DefinePlugin({
