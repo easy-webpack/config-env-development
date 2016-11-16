@@ -52,7 +52,7 @@ export = function development({devtool = 'cheap-module-inline-source-map'} = {})
        * See: https://webpack.github.io/docs/webpack-dev-server.html
        */
       devServer: {
-        port: this.metadata.port,
+        port: parseInt(this.metadata.port),
         host: this.metadata.host,
         historyApiFallback: true,
         watchOptions: {
